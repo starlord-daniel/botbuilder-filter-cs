@@ -3,7 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "botbuilder-filter", "botbuilder-filter\botbuilder-filter.csproj", "{3F5411DD-FBD6-4395-AF39-3A236F2573C5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{77202873-324F-4285-A6DA-25E41DD4482A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{074D507F-B6B7-4522-BE52-FE03E0C9F584}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotBuilder.Filter", "botbuilder-filter\BotBuilder.Filter.csproj", "{1AD03BEE-832C-42F0-AC05-FFC201F46B89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexSample", "RegexSample\RegexSample.csproj", "{BCEA6060-0DA4-4BEF-A4EA-904B9137E9E4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1AD03BEE-832C-42F0-AC05-FFC201F46B89} = {1AD03BEE-832C-42F0-AC05-FFC201F46B89}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +20,21 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3F5411DD-FBD6-4395-AF39-3A236F2573C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3F5411DD-FBD6-4395-AF39-3A236F2573C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3F5411DD-FBD6-4395-AF39-3A236F2573C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3F5411DD-FBD6-4395-AF39-3A236F2573C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AD03BEE-832C-42F0-AC05-FFC201F46B89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AD03BEE-832C-42F0-AC05-FFC201F46B89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AD03BEE-832C-42F0-AC05-FFC201F46B89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AD03BEE-832C-42F0-AC05-FFC201F46B89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCEA6060-0DA4-4BEF-A4EA-904B9137E9E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCEA6060-0DA4-4BEF-A4EA-904B9137E9E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCEA6060-0DA4-4BEF-A4EA-904B9137E9E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCEA6060-0DA4-4BEF-A4EA-904B9137E9E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1AD03BEE-832C-42F0-AC05-FFC201F46B89} = {77202873-324F-4285-A6DA-25E41DD4482A}
+		{BCEA6060-0DA4-4BEF-A4EA-904B9137E9E4} = {074D507F-B6B7-4522-BE52-FE03E0C9F584}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C31DC2A6-743F-4FDF-AC15-EADBBDDD3721}
