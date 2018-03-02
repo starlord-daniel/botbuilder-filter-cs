@@ -31,7 +31,7 @@ services.AddSingleton<BotFrameworkAdapter>(_ =>
 
 A predicate is just a boolean function. In the above case, our lengthPredicate is checks whether the length of the message in context.request.text is over 5 characters:
 
-```sharp
+```csharp
 Func<IBotContext, bool> lengthPredicate = (context) => 
 {
     return (context.Request.Type == "message" && context.Request.AsMessageActivity().Text != null && context.Request.AsMessageActivity().Text.Length < 5);
