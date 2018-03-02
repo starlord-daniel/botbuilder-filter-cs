@@ -32,7 +32,6 @@ namespace Microsoft.Bot.Samples
             services.AddSingleton(_ => Configuration);
             services.AddMvc();
 
-            //
             Func<IBotContext, bool> lengthPredicate = (context) => 
             {
                 return (context.Request.Type == "message" && context.Request.AsMessageActivity().Text != null && context.Request.AsMessageActivity().Text.Length < 5);
@@ -42,7 +41,7 @@ namespace Microsoft.Bot.Samples
             services.AddSingleton<BotFrameworkAdapter>(_ =>
             {
                 return new BotFrameworkAdapter(Configuration)
-                    .Use(FilterMiddleware.Filter(lengthPredicate, new TestMiddleware(), new TestMiddleware()));
+                    .Use(FilterMiddleware.Filter(lengthPredicate, new TestMiddleware()));
             });
         }
 
